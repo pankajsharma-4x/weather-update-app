@@ -1,38 +1,104 @@
-.App {
-  text-align: center;
+
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Karla", sans-serif;
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+main {
+  padding: 36px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  width: auto;
+  height: 65px;
+  background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+  color: white;
+  padding: 20px;
+}
+
+.header--image {
+  height: 100%;
+  margin-right: 6px;
+}
+
+.header--title {
+  font-size: 1.25rem;
+  margin-right: auto;
+}
+
+.header--project {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.input--fields{
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* height: 50px; */
+}
+.btn--div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+button{
+  background-color: rgb(156, 39, 176);
+  color:#fff;
+  border:none;
+  padding: 8px;
+  border-radius: 8px !important;
+  font-family: emoji !important;
+}
+button:hover{
+  background-color: green;
+}
+.input--field{
+  padding: 8px;
+  border-radius: 8px !important;
+  border:none;
+  outline: none;
+}
+.bg--image{
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  height: 100% !important;
+  object-fit: cover;
+}
+.data--container{
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+@media only screen and (min-width: 480px) {
+  .data--container{
+    background: linear-gradient( 35deg,#CCFFFF,#FFCCCC);
+  }
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 480px) {
+  .bg--image{
+    display:none;
   }
-  to {
-    transform: rotate(360deg);
+  .data--container{
+    background-image: url("images/weather.avif");
+    opacity: 0.8;
+    border-radius: 10px;
+    padding: 20px;
   }
+  .input--field{
+    margin: 10px;
+    width: 100%;
+  }
+  button{
+    width: 100%;
+  }
+  .btn--div {
+    margin-left: 20px;
+}
 }
